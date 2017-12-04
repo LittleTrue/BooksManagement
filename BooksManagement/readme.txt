@@ -1,4 +1,4 @@
-Hello 
+Hello git!
 
 and 本项目（BooksManagement）基本要求：
 能实现以下主要功能
