@@ -1,7 +1,8 @@
-package Windows;
+package View;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
 import java.io.*;
 import javax.swing.*;
 
@@ -58,6 +59,7 @@ public class Login extends JFrame {
 						}
 					});
 					}
+
 		});
 		
 		jb2.addActionListener(new ActionListener() {
@@ -67,8 +69,9 @@ public class Login extends JFrame {
 		} 
 		 });
 		
-		setSize(450,260);
+		setSize(450,280);
 		setVisible(true);
+		setLocation(800,400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}

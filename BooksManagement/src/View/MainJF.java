@@ -1,9 +1,11 @@
-package Windows;
+package View;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.Font;
@@ -114,16 +116,91 @@ public class MainJF extends JFrame{
 		gbc_btnNewButton_5.gridy = 4;
 		panel_1.add(btnNewButton_5, gbc_btnNewButton_5);
 		
+		JPanel panel_2 = new JPanel();
+		getContentPane().add(panel_2, BorderLayout.SOUTH);
+		panel_2.setPreferredSize(new Dimension(450,70));
+		panel_2.setLayout(null);
+		
+		JLabel label = new JLabel("\u7CFB\u7EDF\u7EF4\u62A4");
+		label.setIcon(new ImageIcon(MainJF.class.getResource("/images/bookmaintain.png")));
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setFont(new Font("¿¬Ìå", Font.BOLD, 15));
+		label.setBounds(166, 0, 84, 18);
+		panel_2.add(label);
+		
+		JButton btnNewButton_6 = new JButton("\u65B0\u501F\u8BB0\u5361\u767B\u8BB0");
+		btnNewButton_6.setBounds(10, 24, 115, 23);
+		panel_2.add(btnNewButton_6);
+		
+		JButton btnNewButton_7 = new JButton("\u56FE\u4E66\u7C7B\u522B\u65B0\u589E");
+		btnNewButton_7.setBounds(155, 24, 122, 23);
+		panel_2.add(btnNewButton_7);
+		
+		JButton btnNewButton_8 = new JButton("\u56FE\u4E66\u4F5C\u8005\u65B0\u589E");
+		btnNewButton_8.setBounds(302, 24, 122, 23);
+		panel_2.add(btnNewButton_8);
+		
+		
+		
 		btnNewButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-			Book_insert bjf=new Book_insert();
+			Book_insert bjf1=new Book_insert();
 				}
 	});	
+		btnNewButton_1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			Book_change bjf2=new Book_change();
+				}
+	});
+		btnNewButton_2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			Book_delete bjf3=new Book_delete();
+				}
+	});
+		btnNewButton_3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			Book_borrow bjf4=new Book_borrow();
+				}
+	});
+		btnNewButton_4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			Book_return bjf5=new Book_return();
+				}
+	});
+		btnNewButton_5.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			Book_require bjf6=new Book_require();
+			}
+	});
+		btnNewButton_6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				IDcard_new bjf7=new IDcard_new();
+				}
+	});
+		btnNewButton_7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Sort_new bjf8=new Sort_new();
+				}
+	});
+		btnNewButton_8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Author_new bjf9=new Author_new();
+				}
+	});
+		
 		setVisible(true);
-		setBounds(100, 100, 450, 230);
-		setLocation(200,200);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		setLocation(800,400);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	}
 	}
 
